@@ -13,26 +13,32 @@ namespace Array
         {
             Random randomGen = new Random();
             byte[] lottoCijfers = new byte[6];
+            //6 wilekeurige getallen tussen 1 en 42
             for (int i = 0; i < 6; i++)
             {
                 lottoCijfers[1] = (byte)randomGen.Next(1, 43);
             }
 
+            Console.WriteLine();
+            Console.WriteLine("originele getallen");
             for (int i = 0; i < 6; i++)
             {
-                Console.WriteLine(lottoCijfers[1]);
+                Console.WriteLine(lottoCijfers[i]);
             }
 
             Console.WriteLine();
             Console.WriteLine("gesorteerde getallen");
-            foreach (var item in lottoCijfers)
+
+            Array.Sort(lottoCijfers);
+            foreach (byte item in lottoCijfers)
             {
                 Console.WriteLine(item);
             }
 
             Console.WriteLine();
             Console.WriteLine("aflopend gesorteerde getallen");
-            foreach (var item in lottoCijfers)
+            
+            foreach (byte item in lottoCijfers)
             {
                 Console.WriteLine(item);
             }
